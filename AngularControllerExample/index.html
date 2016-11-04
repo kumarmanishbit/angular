@@ -1,0 +1,29 @@
+	<!DOCTYPE html>
+	<html  ng-app="app">
+	  <head>
+	    <title>AngularJS Controllers</title>
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+	    <script type="text/javascript" src="app.js"></script>
+	  </head>
+	<!--
+
+	The role of controllers in Angular is to expose data to our view via $scope, and to add functions to $scope that contain business logic to enhance view behavior. Presentation logic should remain within views and directives.
+
+	-->
+
+	  <body>
+	   <div>
+	  <h1>Controllers</h1>
+	  <div ng-controller="MainCtrl">
+	    <p>{{ message }}</p>
+	  </div>
+	</div>
+	<div ng-controller="MainCtrl">
+	  <p>{{ message }}</p>
+	  <form ng-submit="updateMessage(newMessage)">
+	    <input type="text" ng-model="newMessage">
+	    <button type="submit">Update Message</button>
+	  </form>
+	</div>
+	  </body>
+	</html>
